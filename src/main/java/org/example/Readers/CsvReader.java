@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Readers;
 
 import org.apache.commons.collections4.Trie;
 import org.apache.commons.collections4.trie.PatriciaTrie;
@@ -6,15 +6,11 @@ import org.apache.commons.collections4.trie.PatriciaTrie;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
-public class CSVReader {
+public class CsvReader {
     private String filePath;
 
-    public CSVReader(String filePath) {
+    public CsvReader(String filePath) {
         this.filePath = filePath;
     }
 

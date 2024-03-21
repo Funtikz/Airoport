@@ -1,22 +1,26 @@
 package org.example;
 
+import org.apache.commons.collections4.Trie;
+import org.apache.commons.collections4.trie.PatriciaTrie;
+
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class AirportSearcher {
-    private List<Airoport> airoports = new ArrayList<>();
+public class Searcher {
+    private Trie<String, Integer> data = new PatriciaTrie<>();
 
-    public AirportSearcher(List<Airoport> airoports) {
-        this.airoports = airoports;
+    public Searcher(Trie<String, Integer> data) {
+        this.data = data;
     }
 
-    public List<Integer> searchByName(String name){
-        List<Integer> result = new ArrayList<>();
-        for (int i = 0 ; i< airoports.size(); i++){
-            if (airoports.get(i).getName().startsWith(name)){
-                result.add(airoports.get(i).getId());
-            }
-        }
-        return  result;
+    public HashMap<String, List<Integer>> searchByName(String name){
+        HashMap<String, List<Integer>> map = new HashMap();
+        List<Integer> collect = data.prefixMap(name).values().stream().sorted().collect(Collectors.toList());
+        map.put(name, collect);
+        return map;
     }
+
 }

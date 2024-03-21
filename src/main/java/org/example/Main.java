@@ -1,14 +1,17 @@
 package org.example;
 
-
 import org.apache.commons.collections4.Trie;
+import org.example.Readers.CsvReader;
+import org.example.Readers.JsonHelper;
+import org.example.Readers.TxtReader;
 
-import java.util.Arrays;
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-public class Example {
+public class Main {
     public static void main(String[] args) {
+
 
         if (args.length != 8) {
             System.err.println("Неверное количество аргументов.");
@@ -37,9 +40,27 @@ public class Example {
             }
         }
 
-        CSVReader csvReader = new CSVReader(utilityClass.getPathToCSV());
-        Trie<String, Integer> data = csvReader.readData(utilityClass.getColumn());
-        System.out.println("Все выполнено успешно!");
+        long startTime = System.currentTimeMillis();
+        CsvReader csvReader = new CsvReader(utilityClass.getPathToCSV());
+        Trie<String, Integer> dataCSV = csvReader.readData(utilityClass.getColumn());
+        TxtReader txtReader = new TxtReader(utilityClass.getPathToTxt());
+        List<String> dataTXT = txtReader.read();
+        Searcher searcher = new Searcher(dataCSV);
+        long endTime = System.currentTimeMillis();
+        Result.setTimeReadFile(String.valueOf(endTime-startTime));
+        List<Result> listOfResult = new ArrayList<>();
+
+        for (int i = 0; i<dataTXT.size(); i++){
+            Result result = new Result();
+            long startTime1 = System.currentTimeMillis();
+            HashMap<String, List<Integer>> stringListHashMap = searcher.searchByName(dataTXT.get(i));
+            long endTime1 = System.currentTimeMillis();
+            result.setMapResult(stringListHashMap);
+            result.setTimeOneOperation(String.valueOf(endTime1-startTime1));
+            listOfResult.add(result);
+        }
+        JsonHelper jsonHelper = new JsonHelper(utilityClass.getPathToJson());
+        jsonHelper.createOrUpdate(listOfResult);
     }
 }
 

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Readers;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,14 +6,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TXTReader {
+public class TxtReader {
     private String path;
 
     public String getPath() {
         return path;
     }
 
-    public TXTReader(String path) {
+    public TxtReader(String path) {
         this.path = path;
     }
 

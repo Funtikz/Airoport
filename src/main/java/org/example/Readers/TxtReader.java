@@ -1,0 +1,32 @@
+package org.example;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TXTReader {
+    private String path;
+
+    public String getPath() {
+        return path;
+    }
+
+    public TXTReader(String path) {
+        this.path = path;
+    }
+
+    public List<String> read(){
+        List<String>  result = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                result.add(line);
+            }
+        } catch (IOException e) {
+            System.err.println("Не верный путь к txt файлу!" + e.getMessage());
+        }
+        return  result;
+    }
+}

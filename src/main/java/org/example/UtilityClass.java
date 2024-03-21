@@ -40,13 +40,6 @@ public class UtilityClass {
         this.pathToJson = pathToJson;
     }
 
-    public UtilityClass(String pathToCSV, Integer column, String pathToTxt, String pathToJson) {
-        this.pathToCSV = pathToCSV;
-        this.column = column;
-        this.pathToTxt = pathToTxt;
-        this.pathToJson = pathToJson;
-    }
-
     public UtilityClass(){
 
     }

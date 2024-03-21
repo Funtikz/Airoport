@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
+
 
 public class Result {
     private HashMap<String, List<Integer>> mapResult;
@@ -12,14 +12,12 @@ public class Result {
 
     public String getNameOnHashMap(){
         String string = mapResult.keySet().toString();
-        String cleanedString = string.replace("[", "").replace("]", "");
-        return cleanedString;
+        return string.replace("[", "").replace("]", "");
     }
 
     public String getIdOnHashMap(){
         String string = mapResult.values().toString();
-        String cleanedString = string.replace("[", "").replace("]", "");
-        return cleanedString;
+        return string.replace("[", "").replace("]", "");
     }
 
 

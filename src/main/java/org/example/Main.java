@@ -1,8 +1,8 @@
 package org.example;
 
 import org.apache.commons.collections4.Trie;
+
 import org.example.Readers.CsvReader;
-import org.example.Readers.JsonHelper;
 import org.example.Readers.TxtReader;
 
 import java.util.ArrayList;
@@ -50,15 +50,18 @@ public class Main {
         Result.setTimeReadFile(String.valueOf(endTime-startTime));
         List<Result> listOfResult = new ArrayList<>();
 
-        for (int i = 0; i<dataTXT.size(); i++){
+
+
+        for (int i = 0; i < dataTXT.size(); i++) {
             Result result = new Result();
-            long startTime1 = System.currentTimeMillis();
+            long start = System.currentTimeMillis();
             HashMap<String, List<Integer>> stringListHashMap = searcher.searchByName(dataTXT.get(i));
-            long endTime1 = System.currentTimeMillis();
+            long stop = System.currentTimeMillis();
             result.setMapResult(stringListHashMap);
-            result.setTimeOneOperation(String.valueOf(endTime1-startTime1));
+            result.setTimeOneOperation(String.valueOf(stop - start));
             listOfResult.add(result);
         }
+
         JsonHelper jsonHelper = new JsonHelper(utilityClass.getPathToJson());
         jsonHelper.createOrUpdate(listOfResult);
     }

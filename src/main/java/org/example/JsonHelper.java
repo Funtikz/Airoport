@@ -1,4 +1,4 @@
-package org.example.Readers;
+package org.example;
 
 import org.example.Result;
 
@@ -36,7 +36,6 @@ public class JsonHelper {
             sb.append("]");
             sb.append("}");
             fileWriter.write(sb.toString());
-            System.out.println("Результаты записаны в файл: " + path);
         } catch (IOException e) {
             System.err.println("Ошибка при записи в JSON файл: " + e.getMessage());
             e.printStackTrace();

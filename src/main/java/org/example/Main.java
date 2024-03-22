@@ -49,7 +49,6 @@ public class Main {
         Result.setTimeReadFile(String.valueOf(endTime-startTime));
         List<Result> listOfResult = new ArrayList<>();
 
-
         for (String s : dataTXT) {
             Result result = new Result();
             long start = System.currentTimeMillis();

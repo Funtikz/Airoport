@@ -6,6 +6,9 @@ public class UtilityClass {
    private Integer column;
    private String pathToTxt;
    private String pathToJson;
+   public UtilityClass(){
+
+   }
 
 
     public String getPathToCSV() {
@@ -40,17 +43,5 @@ public class UtilityClass {
         this.pathToJson = pathToJson;
     }
 
-    public UtilityClass(){
 
-    }
-
-    @Override
-    public String toString() {
-        return "UtilityClass{" +
-                "pathToCSV='" + pathToCSV + '\'' +
-                ", column=" + column +
-                ", pathToTxt='" + pathToTxt + '\'' +
-                ", pathToJson='" + pathToJson + '\'' +
-                '}';
-    }
 }

@@ -1,7 +1,6 @@
 package org.example;
 
 import org.apache.commons.collections4.Trie;
-
 import org.example.Readers.CsvReader;
 import org.example.Readers.TxtReader;
 
@@ -51,11 +50,10 @@ public class Main {
         List<Result> listOfResult = new ArrayList<>();
 
 
-
-        for (int i = 0; i < dataTXT.size(); i++) {
+        for (String s : dataTXT) {
             Result result = new Result();
             long start = System.currentTimeMillis();
-            HashMap<String, List<Integer>> stringListHashMap = searcher.searchByName(dataTXT.get(i));
+            HashMap<String, List<Integer>> stringListHashMap = searcher.searchByName(s);
             long stop = System.currentTimeMillis();
             result.setMapResult(stringListHashMap);
             result.setTimeOneOperation(String.valueOf(stop - start));

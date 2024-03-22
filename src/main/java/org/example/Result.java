@@ -48,12 +48,4 @@ public class Result {
         this.timeOneOperation = timeOneOperation;
     }
 
-    @Override
-    public String toString() {
-        return "Result{" +
-                "timeReadFile" + timeReadFile + "\n" +
-                "mapResult=" + mapResult + "\n" +
-                ", timeOneOperation='" + timeOneOperation + '\'' +
-                '}';
-    }
 }

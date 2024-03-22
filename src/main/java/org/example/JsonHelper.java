@@ -1,13 +1,11 @@
 package org.example;
 
-import org.example.Result;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
 public class JsonHelper {
-    private String path;
+    private final String path;
 
     public JsonHelper(String path) {
         this.path = path;
@@ -38,7 +36,6 @@ public class JsonHelper {
             fileWriter.write(sb.toString());
         } catch (IOException e) {
             System.err.println("Ошибка при записи в JSON файл: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 }

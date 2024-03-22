@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TxtReader {
-    private String path;
+    private final String path;
 
     public String getPath() {
         return path;

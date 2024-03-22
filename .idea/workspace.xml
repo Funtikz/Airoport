@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1daf98f5-6dc8-4f32-8d2a-be1b82d747d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +61,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15527344",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -158,7 +157,7 @@
       <workItem from="1711117364839" duration="89000" />
       <workItem from="1711119196753" duration="377000" />
       <workItem from="1711119876128" duration="479000" />
-      <workItem from="1711120379689" duration="1303000" />
+      <workItem from="1711120379689" duration="2660000" />
     </task>
     <servers />
   </component>

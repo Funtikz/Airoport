@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1daf98f5-6dc8-4f32-8d2a-be1b82d747d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Example.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Readers/CsvReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Readers/CsvReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Searcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Example.executor": "Run",
+    "Application.Example.executor": "Debug",
     "Application.Main.executor": "Debug",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.Airoport [clean].executor": "Run",
@@ -157,7 +162,8 @@
       <workItem from="1711117364839" duration="89000" />
       <workItem from="1711119196753" duration="377000" />
       <workItem from="1711119876128" duration="479000" />
-      <workItem from="1711120379689" duration="2660000" />
+      <workItem from="1711120379689" duration="11840000" />
+      <workItem from="1711175603110" duration="1260000" />
     </task>
     <servers />
   </component>
@@ -178,7 +184,7 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Application">
-        <watch expression="list" />
+        <watch expression="list" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

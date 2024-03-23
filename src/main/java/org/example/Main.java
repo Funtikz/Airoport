@@ -41,7 +41,7 @@ public class Main {
 
         long startTime = System.currentTimeMillis();
         CsvReader csvReader = new CsvReader(utilityClass.getPathToCSV());
-        Trie<String, Integer> dataCSV = csvReader.readData(utilityClass.getColumn());
+        Trie<String, List<Integer>> dataCSV = csvReader.readData(utilityClass.getColumn());
         TxtReader txtReader = new TxtReader(utilityClass.getPathToTxt());
         List<String> dataTXT = txtReader.read();
         Searcher searcher = new Searcher(dataCSV);

@@ -47,5 +47,4 @@ public class Result {
     public void setTimeOneOperation(String timeOneOperation) {
         this.timeOneOperation = timeOneOperation;
     }
-
 }
